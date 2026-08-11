@@ -72,17 +72,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* JS Mostrar / ocultar bloque de info extra en Home */
+  function iniciarToggleExtra() {
+    const boton = document.querySelector("#btn-extra-info");
+    const panel = document.querySelector("#extra-info");
+    if (!boton || !panel) return;
+
+    boton.addEventListener("click", () => {
+      const visible = panel.classList.toggle("is-visible");
+      boton.textContent = visible ? "Ocultar tips de lectura" : "Ver tips de lectura";
+      boton.setAttribute("aria-expanded", visible ? "true" : "false");
+    });
+  }
+  iniciarToggleExtra();
 });
 
-/* Mostrar / ocultar bloque de info extra en Home */
-function iniciarToggleExtra() {
-  const boton = document.querySelector("#btn-extra-info");
-  const panel = document.querySelector("#extra-info");
-  if (!boton || !panel) return;
-
-  boton.addEventListener("click", () => {
-    const visible = panel.classList.toggle("is-visible");
-    boton.textContent = visible ? "Ocultar tips de lectura" : "Ver tips de lectura";
-    boton.setAttribute("aria-expanded", visible ? "true" : "false");
-  });
-}

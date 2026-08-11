@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const inputBuscar = document.querySelector("input[type='text'], .form-control");
+  const inputBuscar = document.querySelector("#buscador, input[type='text'], .form-control");
   
   if (inputBuscar) {
     inputBuscar.addEventListener("input", (e) => {

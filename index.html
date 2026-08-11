@@ -42,64 +42,84 @@
   </header>
 
   <main class="py-5">
-    <div class="container">
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold mb-3">Estantería Abierta</h1>
-          <p class="text-muted mb-4">Descubre la colección de libros de Harry Potter y el catálogo completo.</p>
-          <a class="btn btn-dark" href="listado.html">Ver catálogo</a>
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <div class="hero-copy">
+              <span class="hero-kicker">Mini-catálogo de libros</span>
+              <h1 class="display-heading">Estantería Abierta</h1>
+              <p>
+                Descubre lecturas cercanas, independientes y fáciles de explorar.
+                Navega el catálogo, mira el detalle de cada libro y escríbenos si buscas una recomendación.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-accent" href="listado.html">Ver catálogo</a>
+                <a class="btn btn-outline-ink" href="contacto.html">Pedir recomendación</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <figure class="hero-visual mb-0">
+              <img src="img/hero-libreria.jpg" alt="Ilustración de una estantería con libros de distintos colores" width="1200" height="800">
+            </figure>
+          </div>
         </div>
       </div>
+    </section>
 
-      <h2 class="h3 mb-4">Destacados de la semana</h2>
-      <div class="row g-4" id="grilla-libros">
-        <div class="col-sm-6 col-lg-4" data-libro-card data-titulo="Harry Potter y la piedra filosofal" data-autor="J.K. Rowling" data-genero="Magia">
-          <article class="card book-card">
-            <img class="card-img-top" src="img/hp-la-piedra-filosofal.jpg" alt="Libro la piedra filosofal" width="400" height="560">
-            <div class="card-body">
-              <span class="genre-badge">Magia</span>
-              <h2 class="card-title h5 mt-2">Harry Potter y la piedra filosofal</h2>
-              <p class="book-meta">J.K. Rowling · $12.990</p>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=1">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida1">Vista rápida</button>
+    <section class="section" aria-labelledby="destacados-titulo">
+      <div class="container">
+        <h2 class="h3 mb-4">Destacados de la semana</h2>
+        <div class="row g-4" id="grilla-libros">
+          <div class="col-sm-6 col-lg-4" data-libro-card data-titulo="Harry Potter y la piedra filosofal" data-autor="J.K. Rowling" data-genero="Magia">
+            <article class="card book-card">
+              <img class="card-img-top" src="img/hp-la-piedra-filosofal.jpg" alt="Libro la piedra filosofal" width="400" height="560">
+              <div class="card-body">
+                <span class="genre-badge">Magia</span>
+                <h2 class="card-title h5 mt-2">Harry Potter y la piedra filosofal</h2>
+                <p class="book-meta">J.K. Rowling · $12.990</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=1">Ver detalle</a>
+                  <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida1">Vista rápida</button>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
+            </article>
+          </div>
 
-        <div class="col-sm-6 col-lg-4" data-libro-card data-titulo="Harry Potter y la cámara secreta" data-autor="J.K. Rowling" data-genero="Misterio">
-          <article class="card book-card">
-            <img class="card-img-top" src="img/hp-la-camara-secreta.jpg" alt="Tapa del libro la cámara secreta" width="400" height="560">
-            <div class="card-body">
-              <span class="genre-badge">Misterio</span>
-              <h2 class="card-title h5 mt-2">Harry Potter y la cámara secreta</h2>
-              <p class="book-meta">J.K. Rowling · $14.990</p>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=2">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida2">Vista rápida</button>
+          <div class="col-sm-6 col-lg-4" data-libro-card data-titulo="Harry Potter y la cámara secreta" data-autor="J.K. Rowling" data-genero="Misterio">
+            <article class="card book-card">
+              <img class="card-img-top" src="img/hp-la-camara-secreta.jpg" alt="Tapa del libro la cámara secreta" width="400" height="560">
+              <div class="card-body">
+                <span class="genre-badge">Misterio</span>
+                <h2 class="card-title h5 mt-2">Harry Potter y la cámara secreta</h2>
+                <p class="book-meta">J.K. Rowling · $14.990</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=2">Ver detalle</a>
+                  <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida2">Vista rápida</button>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
+            </article>
+          </div>
 
-        <div class="col-sm-6 col-lg-4" data-libro-card data-titulo="Harry Potter y el prisionero de Azkaban" data-autor="J.K. Rowling" data-genero="Aventura">
-          <article class="card book-card">
-            <img class="card-img-top" src="img/hp-el-prisionero-de-azkaban.jpg" alt="Tercer tomo de harry potter" width="400" height="560">
-            <div class="card-body">
-              <span class="genre-badge">Aventura</span>
-              <h2 class="card-title h5 mt-2">Harry Potter y el prisionero de Azkaban</h2>
-              <p class="book-meta">J.K. Rowling · $10.990</p>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=3">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida3">Vista rápida</button>
+          <div class="col-sm-6 col-lg-4" data-libro-card data-titulo="Harry Potter y el prisionero de Azkaban" data-autor="J.K. Rowling" data-genero="Aventura">
+            <article class="card book-card">
+              <img class="card-img-top" src="img/hp-el-prisionero-de-azkaban.jpg" alt="Tercer tomo de harry potter" width="400" height="560">
+              <div class="card-body">
+                <span class="genre-badge">Aventura</span>
+                <h2 class="card-title h5 mt-2">Harry Potter y el prisionero de Azkaban</h2>
+                <p class="book-meta">J.K. Rowling · $10.990</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=3">Ver detalle</a>
+                  <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida3">Vista rápida</button>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
-    </div>
-        <section class="section pt-0" aria-labelledby="tips-titulo">
+    </section>
+    <section class="section pt-0" aria-labelledby="tips-titulo">
       <div class="container">
         <h2 id="tips-titulo" class="section-title">¿Cómo elegir tu próxima lectura?</h2>
         <p class="section-lead">Un tip rápido y, si quieres, más ideas al hacer clic.</p>

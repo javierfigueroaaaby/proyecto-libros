@@ -29,6 +29,7 @@
   --color-accent-dark: #e07a3d;
   --color-muted: #a4b7ae;
   --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --data-libro-card:var(--color-paper)
 }
 
 /* ----- Base mobile first ----- */
@@ -250,6 +251,16 @@ a {
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 0.25rem;
+  color: var(--color-ink); /* claro u oscuro según el tema */
+}
+
+/* En modo oscuro, títulos y textos de tarjetas/modales en blanco */
+[data-theme="dark"] .book-card,
+[data-theme="dark"] .book-card .card-title,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .modal-title,
+[data-theme="dark"] #detalle-libro h1 {
+  color: var(--color-ink);
 }
 
 .book-meta {

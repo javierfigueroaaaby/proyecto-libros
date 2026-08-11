@@ -99,6 +99,71 @@
         </div>
       </div>
     </div>
+        <section class="section pt-0" aria-labelledby="tips-titulo">
+      <div class="container">
+        <h2 id="tips-titulo" class="section-title">¿Cómo elegir tu próxima lectura?</h2>
+        <p class="section-lead">Un tip rápido y, si quieres, más ideas al hacer clic.</p>
+        <button id="btn-extra-info" class="btn btn-accent" type="button" aria-expanded="false" aria-controls="extra-info">
+          Ver tips de lectura
+        </button>
+        <aside id="extra-info" class="extra-info" aria-live="polite">
+          <h3 class="h5">Tips para no perderte en el catálogo</h3>
+          <ul class="mb-0">
+            <li>Filtra por género si ya sabes el mood (misterio, viajes, tecnología).</li>
+            <li>Lee la sinopsis completa en la página de detalle antes de decidir.</li>
+            <li>Si dudas entre dos libros, escríbenos por el formulario de contacto.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-titulo">
+      <div class="container">
+        <h2 id="faq-titulo" class="section-title">Preguntas frecuentes</h2>
+        <p class="section-lead">Respuestas cortas sobre cómo funciona este mini-catálogo.</p>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq1-h">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                ¿Este catálogo vende libros reales?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-h" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Es un proyecto académico de ejemplo (Opción B). Los libros son ficticios para practicar HTML, CSS, Bootstrap y JavaScript.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq2-h">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                ¿Puedo ver el detalle de cada libro?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-h" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sí. En el catálogo usa Ver detalle o Vista rápida. El detalle muestra portada, precio y sinopsis completa.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq3-h">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                ¿Sirve para la Evaluación 2?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-h" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sí. Esta estructura (Home, Listado, Detalle, Contacto) está pensada para después conectar una API pública como Open Library.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Modal 1: La piedra filosofal -->

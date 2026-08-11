@@ -45,31 +45,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  const enlacesNav = document.querySelectorAll("nav a");
-  let linkDark = null;
-  
-  enlacesNav.forEach(a => {
-    if (a.textContent.toLowerCase().includes("modo oscuro")) {
-      linkDark = a;
-    }
-  });
+/*bloque modo oscuro*/ 
+
+  /*bloque modo oscuro*/
+  const linkDark = document.querySelector("#btn-tema");
 
   if (localStorage.getItem("darkMode") === "enabled") {
-    document.body.classList.add("dark-mode");
+    document.documentElement.setAttribute("data-theme", "dark");
     if (linkDark) linkDark.textContent = "Modo claro";
   }
 
   if (linkDark) {
     linkDark.addEventListener("click", (e) => {
       e.preventDefault();
-      document.body.classList.toggle("dark-mode");
 
-      if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("darkMode", "enabled");
-        linkDark.textContent = "Modo claro";
-      } else {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+
+      if (isDark) {
+        document.documentElement.removeAttribute("data-theme");
         localStorage.setItem("darkMode", "disabled");
         linkDark.textContent = "Modo oscuro";
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("darkMode", "enabled");
+        linkDark.textContent = "Modo claro";
       }
     });
   }

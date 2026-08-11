@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tarjetas.forEach(tarjeta => {
         const contenido = tarjeta.textContent.toLowerCase();
         const contenedorPadre = tarjeta.closest(".col-md-6, .col-lg-4, div");
+        
         if (contenedorPadre) {
           if (contenido.includes(texto)) {
             contenedorPadre.style.display = "";
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       });
+
       let mensajeError = document.querySelector("#no-resultados-msg");
       if (encontrados === 0) {
         if (!mensajeError) {
@@ -40,6 +42,34 @@ document.addEventListener("DOMContentLoaded", () => {
         if (mensajeError) {
           mensajeError.style.display = "none";
         }
+      }
+    });
+  }
+  const enlacesNav = document.querySelectorAll("nav a");
+  let linkDark = null;
+  
+  enlacesNav.forEach(a => {
+    if (a.textContent.toLowerCase().includes("modo oscuro")) {
+      linkDark = a;
+    }
+  });
+
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    if (linkDark) linkDark.textContent = "Modo claro";
+  }
+
+  if (linkDark) {
+    linkDark.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        linkDark.textContent = "Modo claro";
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+        linkDark.textContent = "Modo oscuro";
       }
     });
   }

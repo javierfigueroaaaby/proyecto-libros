@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tarjetas.forEach(tarjeta => {
         const contenido = tarjeta.textContent.toLowerCase();
         const contenedorPadre = tarjeta.closest(".col-md-6, .col-lg-4, div");
-        
         if (contenedorPadre) {
           if (contenido.includes(texto)) {
             contenedorPadre.style.display = "";

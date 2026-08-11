@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputBuscar = document.querySelector("#buscador, input[type='text'], .form-control");
   
   if (inputBuscar) {
-    // Si existe un botón de "Buscar" antiguo en el HTML, lo eliminamos automáticamente
     const botonBuscar = document.querySelector("#btn-buscar, button[type='submit']");
     if (botonBuscar && botonBuscar.textContent.includes("Buscar")) {
       botonBuscar.remove();
@@ -26,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       });
-
-      // Gestionar mensaje de error si no hay resultados
       let mensajeError = document.querySelector("#no-resultados-msg");
       if (encontrados === 0) {
         if (!mensajeError) {

@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Mostrar / ocultar bloque de info extra en Home */
+  /* JS Mostrar / ocultar bloque de info extra en Home */
   function iniciarToggleExtra() {
     const boton = document.querySelector("#btn-extra-info");
     const panel = document.querySelector("#extra-info");

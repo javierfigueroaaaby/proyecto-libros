@@ -30,7 +30,6 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="listado.html">Catálogo</a></li>
-            <!--<li class="nav-item"><a class="nav-link" href="detalle.html?id=1">Detalle</a></li>-->
             <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             <li class="nav-item">
               <button id="btn-tema" class="btn btn-theme" type="button" aria-pressed="false">Modo oscuro</button>
@@ -77,7 +76,7 @@
               <p class="book-meta">J.K. Rowling · $12.990</p>
               <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=1">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida" data-libro-id="1">Vista rápida</button>
+                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida1">Vista rápida</button>
               </div>
             </div>
           </article>
@@ -92,7 +91,7 @@
               <p class="book-meta">J.K. Rowling · $14.990</p>
               <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=2">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida" data-libro-id="2">Vista rápida</button>
+                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida2">Vista rápida</button>
               </div>
             </div>
           </article>
@@ -107,7 +106,7 @@
               <p class="book-meta">J.K. Rowling · $10.990</p>
               <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=3">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida" data-libro-id="3">Vista rápida</button>
+                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida3">Vista rápida</button>
               </div>
             </div>
           </article>
@@ -122,7 +121,7 @@
               <p class="book-meta">J.K. Rowling · $13.990</p>
               <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=4">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida" data-libro-id="4">Vista rápida</button>
+                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida4">Vista rápida</button>
               </div>
             </div>
           </article>
@@ -137,7 +136,7 @@
               <p class="book-meta">J.K. Rowling · $11.990</p>
               <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=5">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida" data-libro-id="5">Vista rápida</button>
+                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida5">Vista rápida</button>
               </div>
             </div>
           </article>
@@ -152,7 +151,7 @@
               <p class="book-meta">J.K. Rowling · $13.490</p>
               <div class="d-flex flex-wrap gap-2">
                 <a class="btn btn-sm btn-outline-ink" href="detalle.html?id=6">Ver detalle</a>
-                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida" data-libro-id="6">Vista rápida</button>
+                <button class="btn btn-sm btn-accent" type="button" data-bs-toggle="modal" data-bs-target="#modalVistaRapida6">Vista rápida</button>
               </div>
             </div>
           </article>
@@ -165,22 +164,133 @@
     </div>
   </main>
 
-  <div class="modal fade" id="modalVistaRapida" tabindex="-1" aria-labelledby="modal-titulo" aria-hidden="true">
+  <!-- Modal 1: La piedra filosofal -->
+  <div class="modal fade" id="modalVistaRapida1" tabindex="-1" aria-labelledby="modal-titulo-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title h5" id="modal-titulo">Vista rápida</h2>
+          <h2 class="modal-title h5" id="modal-titulo-1">Harry Potter y la piedra filosofal</h2>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
-          <img id="modal-imagen" class="mb-3 rounded" src="img/libro-1.svg" alt="Portada del libro seleccionado" width="400" height="560">
-          <p class="book-meta mb-2" id="modal-autor"></p>
-          <p id="modal-resumen"></p>
-          <p class="detail-price mb-0" id="modal-precio"></p>
+          <img class="mb-3 rounded" src="img/hp-la-piedra-filosofal.jpg" alt="Portada de Harry Potter y la piedra filosofal" width="400" height="560">
+          <p class="book-meta mb-2">J.K. Rowling · Magia</p>
+          <p>Un niño descubre en su undécimo cumpleaños que es mago y viaja a Hogwarts para comenzar su formación.</p>
+          <p class="detail-price mb-0">$12.990</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
-          <a id="modal-enlace-detalle" class="btn btn-accent" href="detalle.html">Ver ficha completa</a>
+          <a class="btn btn-accent" href="detalle.html?id=1">Ver ficha completa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: La cámara secreta -->
+  <div class="modal fade" id="modalVistaRapida2" tabindex="-1" aria-labelledby="modal-titulo-2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modal-titulo-2">Harry Potter y la cámara secreta</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="mb-3 rounded" src="img/hp-la-camara-secreta.jpg" alt="Portada de Harry Potter y la cámara secreta" width="400" height="560">
+          <p class="book-meta mb-2">J.K. Rowling · Misterio</p>
+          <p>En su segundo año, el protagonista investiga una serie de ataques misteriosos dentro del colegio.</p>
+          <p class="detail-price mb-0">$14.990</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+          <a class="btn btn-accent" href="detalle.html?id=2">Ver ficha completa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: El prisionero de Azkaban -->
+  <div class="modal fade" id="modalVistaRapida3" tabindex="-1" aria-labelledby="modal-titulo-3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modal-titulo-3">Harry Potter y el prisionero de Azkaban</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="mb-3 rounded" src="img/hp-el-prisionero-de-azkaban.jpg" alt="Portada de Harry Potter y el prisionero de Azkaban" width="400" height="560">
+          <p class="book-meta mb-2">J.K. Rowling · Aventura</p>
+          <p>Un peligroso fugitivo anda suelto y el protagonista deberá enfrentar secretos de su propio pasado familiar.</p>
+          <p class="detail-price mb-0">$10.990</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+          <a class="btn btn-accent" href="detalle.html?id=3">Ver ficha completa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: El cáliz de fuego -->
+  <div class="modal fade" id="modalVistaRapida4" tabindex="-1" aria-labelledby="modal-titulo-4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modal-titulo-4">Harry Potter y el cáliz de fuego</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="mb-3 rounded" src="img/hp-el-caliz-de-fuego.jpg" alt="Portada de Harry Potter y el cáliz de fuego" width="400" height="560">
+          <p class="book-meta mb-2">J.K. Rowling · Fantasía</p>
+          <p>Un torneo mágico entre escuelas pone al protagonista frente a pruebas cada vez más peligrosas.</p>
+          <p class="detail-price mb-0">$13.990</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+          <a class="btn btn-accent" href="detalle.html?id=4">Ver ficha completa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: La Orden del Fénix -->
+  <div class="modal fade" id="modalVistaRapida5" tabindex="-1" aria-labelledby="modal-titulo-5" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modal-titulo-5">Harry Potter y la Orden del Fénix</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="mb-3 rounded" src="img/hp-la-orden-del-fenix.jpg" alt="Portada de Harry Potter y la Orden del Fénix" width="400" height="560">
+          <p class="book-meta mb-2">J.K. Rowling · Magia</p>
+          <p>Ante la desconfianza del mundo mágico, el protagonista forma un grupo secreto de estudiantes para prepararse ante una amenaza creciente.</p>
+          <p class="detail-price mb-0">$11.990</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+          <a class="btn btn-accent" href="detalle.html?id=5">Ver ficha completa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6: El misterio del príncipe -->
+  <div class="modal fade" id="modalVistaRapida6" tabindex="-1" aria-labelledby="modal-titulo-6" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modal-titulo-6">Harry Potter y el misterio del príncipe</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="mb-3 rounded" src="img/hp-el-misterio-del-principe.jpg" alt="Portada de Harry Potter y el misterio del príncipe" width="400" height="560">
+          <p class="book-meta mb-2">J.K. Rowling · Misterio</p>
+          <p>El protagonista recibe un libro de texto anotado que esconde secretos sobre el pasado de un enemigo temido.</p>
+          <p class="detail-price mb-0">$13.490</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+          <a class="btn btn-accent" href="detalle.html?id=6">Ver ficha completa</a>
         </div>
       </div>
     </div>
@@ -195,6 +305,7 @@
         </div>
         <div class="col-md-6 text-md-end">
           <p class="mb-1"><a href="index.html">Inicio</a></p>
+          <p class="mb-1"><a href="listado.html">Catálogo</a></p>
           <p class="mb-0"><a href="contacto.html">Contacto</a></p>
         </div>
       </div>

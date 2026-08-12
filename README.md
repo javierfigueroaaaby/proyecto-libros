@@ -1,53 +1,59 @@
-# Estantería Abierta · Proyecto Libros
+# Estantería Abierta
 
-Mini-catálogo de libros (Opción B) para la **Evaluación 1** del Diplomado Fullstack IPSS.
+Proyecto de la **Evaluación 1** del Diplomado Fullstack IPSS (Opción B).
 
-Sitio web estático con HTML, CSS, Bootstrap y JavaScript. Permite explorar libros, ver su detalle, buscar en el catálogo y contactar por recomendaciones.
+Es un mini-catálogo de libros hecho con HTML, CSS, Bootstrap y JavaScript.  
+La idea es que un visitante pueda mirar libros, ver su detalle y pedir una recomendación.
 
-**Repositorio:** [javierfigueroaaaby/proyecto-libros](https://github.com/javierfigueroaaaby/proyecto-libros)
-
----
-
-## Objetivo
-
-Practicar front-end básico:
-
-- Estructura HTML semántica
-- Estilos propios + Bootstrap 5
-- Interactividad con JavaScript
-- Trabajo colaborativo con Git y Pull Requests
+Repositorio: [javierfigueroaaaby/proyecto-libros](https://github.com/javierfigueroaaaby/proyecto-libros)
 
 ---
 
-## Cómo abrir el proyecto
+## ¿Para qué sirve este proyecto?
 
-1. Clona o descarga el repositorio.
-2. Abre la carpeta del proyecto.
-3. Abre el archivo `index.html` en el navegador  
-   (doble clic, o clic derecho → Open with Live Server si usas la extensión en VS Code / Cursor).
+Para practicar lo básico del front-end:
 
-No necesita instalación de dependencias ni servidor obligatorio.
+- armar páginas con HTML
+- darle estilo con CSS y Bootstrap
+- agregar funciones con JavaScript
+- trabajar en equipo con GitHub (ramas y Pull Requests)
 
----
-
-## Páginas
-
-| Archivo | Descripción |
-|---------|-------------|
-| `index.html` | Inicio: hero, libros destacados, tips de lectura y FAQ |
-| `listado.html` | Catálogo completo con búsqueda, filtro y vista rápida |
-| `detalle.html` | Ficha de un libro (cambia según `?id=` en la URL) |
-| `contacto.html` | Formulario de contacto |
-
-### Ejemplo de detalle dinámico
-
-- `detalle.html?id=1` → Harry Potter y la piedra filosofal  
-- `detalle.html?id=2` → Harry Potter y la cámara secreta  
-- … hasta `id=6`
+También pensamos en la **experiencia del cliente**: que sea fácil buscar un libro, ver su información y contactarnos.
 
 ---
 
-## Estructura de carpetas
+## Cómo abrirlo
+
+1. Abre la carpeta del proyecto.
+2. Haz doble clic en `index.html`.
+3. Se abre en el navegador.
+
+No hay que instalar nada raro. Si usas Cursor o VS Code, también puedes abrirla con Live Server.
+
+---
+
+## Páginas del sitio
+
+| Archivo | Qué hace |
+|---------|----------|
+| `index.html` | Página de inicio (hero, destacados, tips y preguntas frecuentes) |
+| `listado.html` | Catálogo con buscador, filtro y vista rápida |
+| `detalle.html` | Muestra un libro según el número de la URL |
+| `contacto.html` | Formulario para escribirnos |
+
+### Cómo funciona el detalle
+
+Cuando entras a un libro, la URL cambia, por ejemplo:
+
+- `detalle.html?id=1` → La piedra filosofal  
+- `detalle.html?id=2` → La cámara secreta  
+- `detalle.html?id=3` → El prisionero de Azkaban  
+
+JavaScript lee ese `id` y cambia la imagen, el título, el precio y la sinopsis.
+
+---
+
+## Carpetas del proyecto
 
 ```text
 proyecto-libros/
@@ -56,59 +62,65 @@ proyecto-libros/
 ├── detalle.html
 ├── contacto.html
 ├── css/
-│   └── custom.css      # Estilos propios (después de Bootstrap)
+│   └── custom.css     ← nuestros estilos
 ├── js/
-│   └── main.js         # Buscador, modo oscuro, detalle dinámico, tips
-├── img/                # Portadas e imagen del hero
-└── README.md
+│   └── main.js        ← buscador, modo oscuro y detalle
+├── img/               ← portadas de los libros
+└── README.md          ← este archivo
 ```
 
 ---
 
-## Funcionalidades
+## Qué se puede hacer en el sitio
 
-- Navegación común (header / footer) en todas las páginas
-- **Modo oscuro / claro** (se guarda en `localStorage`)
-- Buscador de libros en el catálogo
-- Modales de “Vista rápida”
-- Detalle dinámico: imagen, título, precio y sinopsis según el `id`
-- Tips de lectura (mostrar / ocultar)
-- Acordeón de preguntas frecuentes
-- Formulario de contacto con labels asociados a los inputs
+- Navegar entre Inicio, Catálogo y Contacto
+- Activar **modo oscuro** (se recuerda al recargar)
+- Buscar libros por nombre o autor
+- Filtrar por género
+- Ver una vista rápida o el detalle completo
+- Leer tips de lectura
+- Ver preguntas frecuentes orientadas al cliente
+- Enviar un mensaje por el formulario de contacto
+
+### Nota del formulario
+
+El formulario de contacto se mantiene con fondo blanco (`bg-white`)  
+para que los labels y lo que se escribe se vean en negro, también en modo oscuro.
 
 ---
 
-## Tecnologías
+## Tecnologías que usamos
 
 - HTML5
-- CSS3 (`custom.css` + variables CSS)
+- CSS3
 - Bootstrap 5.3
-- JavaScript (vanilla)
-- Google Fonts (Syne e IBM Plex Sans)
-- Git / GitHub (ramas y Pull Requests)
+- JavaScript
+- Git y GitHub
 
 ---
 
-## Flujo de trabajo en equipo
+## Cómo trabajamos en equipo
 
-1. Actualizar `main`:
-   ```bash
-   git checkout main
-   git pull origin main
-   ```
-2. Crear una rama para tu avance:
-   ```bash
-   git checkout -b nombre-de-tu-rama
-   ```
-3. Hacer cambios, commit y push.
-4. Crear un **Pull Request** para que el equipo revise y apruebe.
-5. Tras el merge, volver a actualizar `main`.
+1. Bajamos lo último de `main`
+2. Creamos una rama para nuestros cambios
+3. Hacemos commit y push
+4. Creamos un Pull Request
+5. El compañero revisa y aprueba (Merge)
+
+Ejemplo:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b revision-y-detalles
+```
 
 ---
 
-## Autores
+## Integrantes
 
-Proyecto colaborativo — Diplomado Fullstack IPSS.
 - Bill Camelo
 - Javier Figueroa Aaby
 - Sebastián Salazar Díaz
+
+Diplomado Fullstack IPSS · Módulo 1

@@ -293,9 +293,7 @@ a {
 }
 
 .filters-bar .form-control,
-.filters-bar .form-select,
-.contact-form .form-control,
-.contact-form .form-select {
+.filters-bar .form-select {
   border-radius: 0.65rem;
   border-color: rgba(45, 90, 69, 0.25);
   background: var(--color-paper);
@@ -303,8 +301,7 @@ a {
 }
 
 .filters-bar .form-control:focus,
-.filters-bar .form-select:focus,
-.contact-form .form-control:focus {
+.filters-bar .form-select:focus {
   border-color: var(--color-moss);
   box-shadow: 0 0 0 0.2rem rgba(45, 90, 69, 0.15);
 }
@@ -399,8 +396,47 @@ a {
 }
 
 /* ----- Contacto ----- */
-.contact-form .form-label {
+/* Mantiene el formulario blanco (bg-white) también en modo oscuro */
+form.bg-white {
+  background-color: #ffffff !important;
+  color: #14261f;
+}
+
+form.bg-white .form-label {
   font-weight: 600;
+  color: #14261f !important; /* labels negros siempre */
+}
+
+form.bg-white .form-control,
+form.bg-white .form-select {
+  border-radius: 0.65rem;
+  border-color: rgba(45, 90, 69, 0.25);
+  background-color: #ffffff;
+  color: #14261f;
+}
+
+form.bg-white .form-control:focus {
+  border-color: var(--color-moss);
+  box-shadow: 0 0 0 0.2rem rgba(45, 90, 69, 0.15);
+  background-color: #ffffff;
+  color: #14261f;
+}
+
+[data-theme="dark"] form.bg-white,
+[data-bs-theme="dark"] form.bg-white {
+  background-color: #ffffff !important;
+  color: #14261f;
+}
+
+[data-theme="dark"] form.bg-white .form-label,
+[data-bs-theme="dark"] form.bg-white .form-label {
+  color: #14261f !important;
+}
+
+[data-theme="dark"] form.bg-white .form-control,
+[data-bs-theme="dark"] form.bg-white .form-control {
+  background-color: #ffffff;
+  color: #14261f;
 }
 
 .field-feedback {
